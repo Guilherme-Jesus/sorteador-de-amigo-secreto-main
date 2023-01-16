@@ -10,7 +10,7 @@ describe("O Comportamento do Formulario.tsx", () => {
       </RecoilRoot>
     );
     const input = screen.getByPlaceholderText(
-      "Insira os nomes do participantes"
+      "Insira os nomes dos participantes"
     ); // Busca o input pelo seu placeholder
     const botao = screen.getByRole("button"); // Busca o botão pelo seu role
     expect(input).toBeInTheDocument(); // Verifica se o input existe
@@ -24,7 +24,7 @@ describe("O Comportamento do Formulario.tsx", () => {
     );
     // Busca o input pelo seu placeholder
     const input = screen.getByPlaceholderText(
-      "Insira os nomes do participantes"
+      "Insira os nomes dos participantes"
     );
     // Busca o botão pelo seu role
     const botao = screen.getByRole("button");
@@ -46,7 +46,7 @@ describe("O Comportamento do Formulario.tsx", () => {
       </RecoilRoot>
     );
     const input = screen.getByPlaceholderText(
-      "Insira os nomes do participantes"
+      "Insira os nomes dos participantes"
     );
     const botao = screen.getByRole("button");
     fireEvent.change(input, { target: { value: "Ana Catarina" } });
@@ -66,7 +66,7 @@ describe("O Comportamento do Formulario.tsx", () => {
       </RecoilRoot>
     );
     const input = screen.getByPlaceholderText(
-      "Insira os nomes do participantes"
+      "Insira os nomes dos participantes"
     );
     const botao = screen.getByRole("button");
     fireEvent.change(input, { target: { value: "Ana Catarina" } });
