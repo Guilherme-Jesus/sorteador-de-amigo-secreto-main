@@ -15,6 +15,13 @@ jest.mock("react-router-dom", () => {
     useNavigate: () => mockNavegacao,
   };
 });
+const mockSorteio = jest.fn();
+
+jest.mock("../state/hooks/useSorteador", () => {
+  return {
+    useSorteador: () => mockSorteio,
+  };
+});
 
 describe("Quando não existem participantes suficientes", () => {
   beforeEach(() => {
@@ -55,7 +62,8 @@ describe("Quando existem participantes suficientes", () => {
     );
     const botao = screen.getByRole("button");
     fireEvent.click(botao);
-    expect(mockNavegacao).toHaveBeenCalledWith("/sorteio");
     expect(mockNavegacao).toHaveBeenCalledTimes(1);
+    expect(mockNavegacao).toHaveBeenCalledWith("/sorteio");
+    expect(mockSorteio).toHaveBeenCalledTimes(1);
   });
 });
