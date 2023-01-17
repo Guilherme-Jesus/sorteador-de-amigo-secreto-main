@@ -1,7 +1,7 @@
 import { useRef, useState } from "react";
 import { useAdicionarParticipante } from "../state/hooks/useAdicionarParticipante";
 import { useMensagemDeErro } from "../state/hooks/useMensagemDeErro";
-
+import "./Formulario.css";
 const Formulario = () => {
   const [nome, setNome] = useState<string>("");
   const inputRef = useRef<HTMLInputElement>(null);
